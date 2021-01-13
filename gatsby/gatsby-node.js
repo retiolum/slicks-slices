@@ -89,7 +89,6 @@ async function createSlicemasterPages({ graphql, actions }) {
   });
 
   const pageSize = parseInt(process.env.GATSBY_PAGE_SIZE);
-  console.log(pageSize);
   const pageCount = Math.ceil(data.slicemasters.totalCount / pageSize);
 
   Array.from({ length: pageCount }).forEach((_, i) => {
