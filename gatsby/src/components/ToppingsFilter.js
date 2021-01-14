@@ -29,6 +29,8 @@ const ToppingsStyles = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 4rem;
+  font-style: 2rem;
+  font-size: clamp(12px, 3vw, 20px);
 
   a {
     display: grid;

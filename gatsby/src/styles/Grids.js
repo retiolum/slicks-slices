@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const HomePageGrid = styled.div`
+  --columns: 2;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  grid-template-columns: repeat(var(--columns), minmax(auto, 1fr));
+  @media (max-width: 800px) {
+    --columns: 1;
+  }
 `;
 
 export const ItemsGrid = styled.div`
@@ -21,10 +25,14 @@ export const ItemStyles = styled.div`
     background-size: cover;
   }
   p {
-    transform: rotate(-2deg) translateY(-140%);
+    transform: rotate(-2deg) translateY(-10px);
     position: absolute;
     width: 100%;
     left: 0;
+    top: 0;
+    margin: 0;
+    font-style: 2rem;
+    font-size: clamp(12px, 5vw, 20px);
   }
   @keyframes shine {
     from {

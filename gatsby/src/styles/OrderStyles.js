@@ -21,6 +21,12 @@ const OrderStyles = styled.form`
       display: none;
     }
   }
+  @media (max-width: 800px) {
+    fieldset.menu,
+    fieldset.order {
+      grid-column: span 2;
+    }
+  }
 `;
 
 export default OrderStyles;
